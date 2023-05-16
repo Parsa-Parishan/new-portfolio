@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Sedgwick+Ave+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
@@ -167,10 +168,6 @@ body #root .App .cover .hole {
   width: 43vh !important;
   height: 43vh !important;
   transform: rotate(225deg) skew(30deg, 30deg);
-}
-
-.hidden-overflow {
-  overflow: hidden;
 }
 
 nav {
@@ -967,44 +964,43 @@ main .resume-pdf img {
   }
 }
 .skills {
-  border: 1px solid;
   position: relative;
   z-index: 4;
   width: 100%;
   overflow: hidden;
   margin-top: 3.5rem;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  transform: translateY(80%);
+}
+.skills ::after {
+  content: "scroll →";
+  position: fixed;
+  bottom: 0;
+  right: 1rem;
+  font-size: 1rem;
+  transform: scaleX(125%);
 }
 .skills ul {
   display: flex;
-  border: 1px solid;
-  overflow: hidden;
-  width: 150%;
-  gap: 2rem;
+  position: relative;
+  gap: 10%;
   justify-content: space-between;
   align-items: center;
   font-size: 3rem;
   overflow: scroll;
-  animation: slide 4s linear infinite 5s;
+  padding-inline: 2rem;
 }
 
 @keyframes slide {
   0% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(-16%);
-  }
-  40% {
-    transform: translateX(-16%);
-  }
-  60% {
-    transform: translateX(-32%);
-  }
-  80% {
-    transform: translateX(-32%);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    opacity: 1;
+    animation-timing-function: linear;
   }
   100% {
-    transform: translateX(-48%);
+    transform: matrix(1, 0, 0, 1, -2609.619140625, 0);
+    opacity: 1;
   }
 }
 .connect {
