@@ -13,7 +13,7 @@ import { BsFillBootstrapFill } from "react-icons/bs";
 export default function Skills() {
   return (
     <div className="skills">
-      <ul>
+      <ul className="first">
         <li>
           <IoLogoHtml5 />
         </li>
@@ -41,6 +41,7 @@ export default function Skills() {
         <li>
           <BsFillBootstrapFill />
         </li>
+        
       </ul>
     </div>
   );
