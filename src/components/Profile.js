@@ -28,7 +28,7 @@ export default function Profile() {
   return (
     <div className="profile">
       <div className="profile-header">
-        <h1 className={`${header && "header-transition"}`}>
+        <h1 className={`${header && "header-transition"}`} id="about">
           Hello. I am Parsa<span>Parishan</span>
         </h1>
       </div>
@@ -39,14 +39,13 @@ export default function Profile() {
             working with a small team at WebDev Canada. I help create and
             maintain components. I work on the Front-End side of things. My
             daily stack consists of React.Js, React router, Redux.js, and Sass.
-            I also work on my projects to hone and expand my skills. I’m
-            currently learning Back-End development to gradually shift toward
-            Full-stack.
+            <span id="resume"></span>I also work on my projects to hone and
+            expand my skills. I’m currently learning Back-End development to
+            gradually shift toward Full-stack.
           </p>
           <br />
           <div
             className="resume"
-            id="resume"
             onMouseEnter={() => setShow(true)}
             onMouseLeave={() => setShow(false)}
           >

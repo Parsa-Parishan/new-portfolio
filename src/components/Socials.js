@@ -11,7 +11,7 @@ export default function Socials() {
     <div className="socials">
       <ul>
         <li>
-          <a href="https://github.com/Parsa-Parishan">
+          <a href="https://github.com/Parsa-Parishan" target="_blank">
             <FaGithub />
           </a>
         </li>
@@ -24,7 +24,7 @@ export default function Socials() {
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/parsa_parishan/">
+          <a href="https://www.instagram.com/parsa_parishan/" target="_blank">
             <FaInstagram />
           </a>
         </li>

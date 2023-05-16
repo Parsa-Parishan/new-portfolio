@@ -17,9 +17,9 @@ function App() {
   const [hidden, setHidden] = useState(true);
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 450) {
-      setOpacity(window.scrollY / 750);
-    }
+    // if (window.scrollY > 450) {
+      setOpacity(window.scrollY / 1500);
+    // }
   });
 
   const body = document.body;
