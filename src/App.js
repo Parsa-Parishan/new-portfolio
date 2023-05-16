@@ -14,16 +14,17 @@ function App() {
   const [transoform, setTransoform] = useState(true);
   const [opacity, setOpacity] = useState(0);
   const [landing, setLanding] = useState(false);
-  const [hidden, setHidden] = useState(true);
+  const [hidden, setHidden] = useState(false);
 
   window.addEventListener("scroll", () => {
     // if (window.scrollY > 450) {
-      setOpacity(window.scrollY / 1500);
+    setOpacity(window.scrollY / 1500);
     // }
   });
 
   const body = document.body;
-  body.classList = hidden && "hidden-overflow";
+  body.classList = hidden && "show-overflow";
+  console.log(body);
 
   useEffect(() => {
     const intro = setTimeout(() => {
@@ -35,7 +36,7 @@ function App() {
     }, 1500);
 
     const hide = setTimeout(() => {
-      setHidden(() => false);
+      setHidden(() => true);
     }, 2500);
 
     return () => {
@@ -72,7 +73,7 @@ function App() {
         </header>
         <main>
           <Profile />
-          {/* <Skills /> */}
+          <Skills />
           <Projects />
         </main>
         <Socials />
