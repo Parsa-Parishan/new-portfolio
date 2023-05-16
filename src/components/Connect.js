@@ -9,11 +9,6 @@ export default function Connect() {
     message: "",
   });
 
-  const sample = {
-    first: "sdf",
-    second: "asdf",
-  };
-
   const handleChange = (e) => {
     setEmail((prev) => ({
       ...prev,
@@ -27,7 +22,7 @@ export default function Connect() {
     console.log(email);
     let emailBody = {
       method: "POST",
-      body: JSON.stringify(sample),
+      body: JSON.stringify(email),
       headers: {
         "Content-type": "application/json",
       },
@@ -40,6 +35,12 @@ export default function Connect() {
       }
       const jsonResponse = await response.json();
       console.log(jsonResponse);
+      setEmail({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
     } catch (err) {
       console.log(err);
     }
@@ -59,7 +60,7 @@ export default function Connect() {
         <h1>Get in Touch</h1>
       </div>
       <div className="form">
-        <form onSubmit={handleSubmit} onChange={handleChange}>
+        <form onSubmit={handleSubmit}>
           <div className="name-email">
             <div className="name">
               <label htmlFor="name">FULL NAME</label>
@@ -70,6 +71,7 @@ export default function Connect() {
                 placeholder="Name"
                 name="name"
                 value={email.name}
+                onChange={handleChange}
               />
             </div>
             <div className="email">
@@ -81,6 +83,7 @@ export default function Connect() {
                 placeholder="Email"
                 name="email"
                 value={email.email}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -93,6 +96,7 @@ export default function Connect() {
               placeholder="Subject"
               name="subject"
               value={email.subject}
+              onChange={handleChange}
             />
           </div>
           <div className="message">
@@ -104,6 +108,7 @@ export default function Connect() {
               placeholder="Message"
               name="message"
               value={email.message}
+              onChange={handleChange}
             />
           </div>
           <div className="button">
