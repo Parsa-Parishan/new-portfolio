@@ -1,0 +1,1151 @@
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Sedgwick+Ave+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove padding from ul, ol */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* FONT SIZE */
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+body {
+  padding: 0;
+  position: relative;
+}
+body #root {
+  position: relative;
+}
+body #root .App {
+  background: url(../img/boston.jpg) no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  padding-inline: 1.5rem;
+  color: white;
+  z-index: 0;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  body #root .App {
+    padding-inline: 3rem;
+  }
+}
+body #root .App .cover {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 1;
+  mix-blend-mode: hard-light;
+  inset: 0;
+  margin: auto;
+}
+body #root .App .cover .hole {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: gray;
+  z-index: 2;
+  inset: 0;
+  margin: auto;
+  transition: all 0.5s ease-out;
+}
+
+.transform-hole {
+  width: 43vh !important;
+  height: 43vh !important;
+  transform: rotate(225deg) skew(30deg, 30deg);
+}
+
+.hidden-overflow {
+  overflow: hidden;
+}
+
+nav {
+  z-index: 5;
+  position: fixed;
+  left: 0;
+  top: -2px;
+  width: 100%;
+  transform: translateY(-100%);
+  transition: transform 0.5s linear;
+  font-family: "Teko", sans-serif;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+nav a:visited {
+  color: white;
+}
+nav .nav-bar {
+  border-bottom: 2px solid;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem 1rem 0;
+  padding-block: 1rem;
+  padding-inline: 0.5rem;
+  position: relative;
+  width: 100%;
+  font-size: 1rem;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+nav .nav-bar .right > *,
+nav .nav-bar .left > * {
+  display: inline-block;
+}
+nav .nav-bar .right > * + * {
+  margin-inline: 5px;
+}
+nav .nav-bar .left > div + div {
+  margin-inline: 1rem;
+}
+nav .nav-bar .left {
+  position: relative;
+}
+nav .nav-bar .left .logo {
+  cursor: pointer;
+}
+nav .nav-bar .left .position {
+  display: none;
+}
+nav .nav-bar .right {
+  position: relative;
+}
+nav .nav-bar .right div {
+  position: relative;
+  cursor: pointer;
+}
+nav .nav-bar .right div:before,
+nav .nav-bar .right div:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #000;
+}
+nav .nav-bar .right div:before {
+  left: -2.5px;
+}
+nav .nav-bar .right div:after {
+  right: 2.5px;
+  background: #000;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+nav .nav-bar .right div:hover:before {
+  background: #000;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+nav .nav-bar .right div:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+@media (min-width: 768px) {
+  nav .nav-bar {
+    font-size: 1.5rem;
+  }
+  nav .nav-bar .left .position {
+    display: initial;
+  }
+}
+
+.nav-transition {
+  transform: translateY(0) !important;
+}
+
+header {
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+  padding-block: 1.5rem;
+  height: 85vh;
+  transform: translateY(10vh);
+}
+header .extra {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  float: inline-end;
+  line-height: 1;
+  margin-bottom: 2rem;
+  -webkit-backdrop-filter: grayscale(25%);
+          backdrop-filter: grayscale(25%);
+  width: 100%;
+  border-radius: 10px;
+  font-family: "Mr Dafoe", cursive;
+  color: white;
+}
+header .extra div {
+  font-size: 3rem;
+  position: relative;
+  animation: extra_animation 0.5s ease-in-out 1700ms forwards;
+  opacity: 0;
+}
+header .extra div .month {
+  margin-inline: 0.5rem 2rem;
+  font-family: "Sedgwick Ave Display", cursive;
+  font-size: 1.5rem;
+  vertical-align: top;
+}
+header .extra div .month span {
+  font-size: 0.5rem;
+  position: absolute;
+  width: 97%;
+  right: 25%;
+  bottom: -10%;
+  text-align: left;
+  font-family: sans-serif;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+header .header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  clear: right;
+  gap: 2rem;
+}
+header .header div {
+  position: relative;
+  -webkit-backdrop-filter: grayscale(25%);
+          backdrop-filter: grayscale(25%);
+  border-radius: 10px;
+}
+header .header .intro {
+  font-family: "Teko", sans-serif;
+}
+header .header .intro .greet {
+  font-size: 2rem;
+  overflow-y: hidden;
+}
+header .header .intro .greet div {
+  transform: translateY(100%);
+  transition: all 0.5s ease-out;
+}
+header .header .intro h1 {
+  line-height: 0.75;
+}
+header .header .intro h1 .name {
+  overflow: hidden;
+}
+header .header .intro h1 .name .first {
+  font-size: 4rem;
+  transform: translateY(-120%);
+  transition: transform 0.5s ease-in;
+}
+header .header .intro h1 .name div {
+  font-size: 1.25rem;
+  transform: translateY(150%);
+  transition: all 0.5s ease-out;
+}
+header .header .intro h1 .occupation {
+  font-size: 4rem;
+  overflow-y: hidden;
+}
+header .header .intro h1 .occupation div {
+  transform: translateY(-200%);
+  transition: transform 0.5s ease-in;
+}
+header .header .about-me {
+  font-size: 1.09rem;
+  display: grid;
+  place-items: center;
+  padding: 0.5rem;
+  position: 1;
+  overflow: hidden;
+  background: transparent;
+  font-family: "Inconsolata", monospace;
+}
+header .header .about-me div {
+  padding-inline: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  transform: scaleX(85%);
+}
+header .header .about-me div p {
+  color: #fff;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  width: 0;
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: typing 2s steps(30, start) forwards, blink-caret 0.5s step-end backwards;
+}
+header .header .about-me div :nth-child(1) {
+  animation-delay: 1500ms;
+}
+header .header .about-me div :nth-child(2) {
+  animation-delay: 3000ms;
+}
+header .header .about-me div :nth-child(3) {
+  animation-delay: 4500ms;
+}
+header .header .about-me div :nth-child(4) {
+  animation-delay: 6500ms;
+}
+header .header .about-me div :nth-child(5) {
+  animation-delay: 8500ms;
+}
+header .header .about-me div :nth-child(6) {
+  animation-delay: 10000ms;
+}
+header .header .about-me div :nth-child(7) {
+  animation-delay: 12000ms;
+}
+@media (min-width: 768px) {
+  header .extra div {
+    font-size: 10rem;
+    cursor: pointer;
+  }
+  header .extra div .month {
+    vertical-align: middle;
+    font-size: 3rem;
+    position: relative;
+  }
+  header .extra div .month .work {
+    transform: rotate(90deg);
+    font-size: 1rem;
+    right: -50px;
+    bottom: 20%;
+  }
+  header .extra div .month .fake {
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    font-size: 1rem;
+    opacity: 0;
+    transition: all 0.3s ease-in 250ms;
+  }
+  header .extra div:hover .month .fake {
+    opacity: 1;
+  }
+  header .header .intro h1 .name {
+    font-size: 8rem;
+  }
+  header .header .intro h1 .name div {
+    font-size: 2rem;
+  }
+  header .header .intro h1 .occupation {
+    font-size: 8rem;
+  }
+  header .header .about-me {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  header .extra div {
+    font-size: 10rem;
+  }
+  header .header {
+    flex-direction: row;
+  }
+  header .header div {
+    width: 75%;
+  }
+  header .header .intro h1 .name {
+    font-size: 8rem;
+  }
+  header .header .intro h1 .name .first {
+    font-size: 7rem;
+  }
+  header .header .intro h1 .name div {
+    font-size: 2rem;
+  }
+  header .header .intro h1 .occupation {
+    font-size: 7rem;
+  }
+  header .header .about-me {
+    font-size: 1.75rem;
+  }
+}
+
+.name-transition {
+  transform: translateY(0) !important;
+}
+
+.something-transition {
+  transform: translateY(0) !important;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-right: none; /* The typwriter cursor */
+    border-color: transparent;
+  }
+  50% {
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    border-color: orange;
+  }
+}
+@keyframes extra_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main {
+  position: relative;
+  z-index: 4;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+}
+main .profile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+main .profile .profile-header {
+  position: relative;
+  padding-left: 1rem;
+  font-family: "Teko", sans-serif;
+  overflow-y: hidden;
+  padding-block: 1rem;
+}
+main .profile .profile-header h1 {
+  transform: translateY(-150%);
+  transition: all 0.5s linear;
+}
+main .profile .profile-header h1 span {
+  position: absolute;
+  right: 0;
+  bottom: -15%;
+  font-size: 1.25rem;
+}
+main .profile .background-avatar {
+  height: 70%;
+}
+main .profile .background-avatar .background {
+  text-indent: 30%;
+  padding: 0.75rem;
+  padding-left: 12%;
+  margin-bottom: 2.5rem;
+  font-family: "Inconsolata", monospace;
+  line-height: 1.25;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+}
+main .profile .background-avatar .background p {
+  transform: translate(-110%, -110%);
+  opacity: 0;
+  transition: all 1s linear;
+}
+main .profile .background-avatar .background .resume {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  text-indent: 0;
+  border-radius: 25px;
+  white-space: nowrap;
+  padding: 0.25rem 0.5rem;
+  overflow: hidden;
+  width: 8.5ch;
+  font-family: initial;
+}
+main .profile .background-avatar .background .resume a {
+  color: white;
+}
+main .profile .background-avatar .background .resume a:visited {
+  color: white;
+}
+@media (min-width: 768px) {
+  main .profile .background-avatar .background .resume {
+    width: 8.5ch;
+  }
+}
+main .profile .background-avatar .background .resume span {
+  display: inline-block;
+  margin-right: 10%;
+}
+main .profile .background-avatar .background .resume:hover span.first {
+  animation: loop1 1.5s linear infinite;
+}
+main .profile .background-avatar .background .resume:hover span.second {
+  animation: loop2 1.5s linear infinite;
+  animation-delay: 0.75s;
+}
+main .profile .background-avatar .avatar {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+main .profile .background-avatar .avatar img {
+  width: 60vw;
+  border-radius: 50%;
+  border: 3px dashed;
+  animation: avatar 6s linear infinite;
+  box-shadow: 2px 1px 15px 5px black;
+  justify-self: end;
+  margin-bottom: 2rem;
+}
+main .profile .background-avatar .avatar p {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: baseline;
+  opacity: 0;
+  transform: rotate(30deg) translate(50px, 150px);
+  transition: all 0.6s linear;
+}
+main .profile .background-avatar .avatar p svg {
+  position: absolute;
+  right: -40%;
+}
+main .resume-pdf {
+  position: fixed;
+  z-index: 10;
+  width: 15rem;
+  height: 40vh;
+  bottom: 2rem;
+  right: 2rem;
+  opacity: 0;
+  transform: rotate(0) translate(0, 0);
+  transition: all 0.25s linear;
+}
+main .resume-pdf img {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  main .profile .background-avatar .avatar p {
+    align-self: center;
+  }
+}
+@media (min-width: 1024px) {
+  main .profile .profile-header {
+    text-align: left;
+    width: 100%;
+  }
+  main .profile .profile-header h1 {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  main .profile .profile-header h1 span {
+    position: absolute;
+    right: 10%;
+    bottom: -15%;
+    font-size: 1rem;
+  }
+  main .profile .background-avatar {
+    display: flex;
+  }
+  main .profile .background-avatar div {
+    width: 50%;
+  }
+  main .profile .background-avatar .background {
+    font-size: 2rem;
+    padding: initial;
+  }
+  main .profile .background-avatar .avatar img {
+    width: 35vw;
+  }
+  main .profile .background-avatar .avatar p {
+    align-self: baseline;
+    font-size: 2rem;
+  }
+}
+
+@keyframes avatar {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes loop1 {
+  0% {
+    opacity: 0.25;
+    transform: translateX(110%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-110%);
+  }
+}
+@keyframes loop2 {
+  0% {
+    opacity: 0.25;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-220%);
+  }
+}
+.show-resume {
+  transform: rotate(15deg) translate(-10rem, -3rem) !important;
+  opacity: 1 !important;
+}
+
+.header-transition {
+  transform: translateY(0) !important;
+}
+
+.background-transition {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+
+.caption-transition {
+  opacity: 1 !important;
+  transform: rotate(0) translate(0, 0) !important;
+}
+
+.projects {
+  margin-top: 30vh;
+  z-index: 4;
+}
+.projects .header {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  z-index: 1;
+  font-family: "Teko", sans-serif;
+  overflow: hidden;
+  padding-block: 5px;
+}
+.projects .header h2 {
+  display: block;
+  transform: translateY(-115%);
+  transition: all 0.5s linear;
+}
+.projects .show-case {
+  display: grid;
+  grid-template-rows: repeat(3, 12.5rem);
+  gap: 2.5rem;
+  z-index: 1;
+}
+.projects .show-case .project {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  transition: all 1.5s ease-out;
+}
+.projects .show-case .project .image-wrapper {
+  width: 100%;
+  height: 100%;
+  transition: all 1.5s ease-out;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  transform: translateY(-130%);
+  overflow: hidden;
+}
+.projects .show-case .project .image-wrapper .image {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: all 1.5s ease-out;
+  position: relative;
+}
+.projects .show-case .project .image-wrapper .image .filter {
+  position: absolute;
+  inset: 0;
+  -webkit-backdrop-filter: grayscale(100%);
+          backdrop-filter: grayscale(100%);
+}
+.projects .show-case .project .image-wrapper:hover .image {
+  transform: scale(130%, 130%);
+}
+.projects .show-case .project .caption {
+  display: none;
+  position: relative;
+  font-family: "Teko", sans-serif;
+  transform: translateY(500%);
+  transition: all 0.5s linear;
+}
+.projects .show-case .project .caption .caption-paragraph {
+  display: none;
+}
+.projects .show-case .project .caption .caption-paragraph p {
+  width: 50%;
+}
+.projects .show-case .project .caption .caption-tech {
+  display: none;
+}
+.projects .show-case .project .caption .links {
+  display: none;
+}
+@media (min-width: 768px) {
+  .projects .show-case .project {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .projects .show-case .project .image-wrapper {
+    grid-column: 1/4;
+    grid-row: 1/-1;
+  }
+  .projects .show-case .project .caption {
+    display: initial;
+    grid-column: 3/-1;
+    grid-row: 2/3;
+  }
+  .projects .show-case .project.api .image-wrapper {
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+  }
+  .projects .show-case .project.api .caption {
+    display: initial;
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+}
+@media (min-width: 768px) {
+  .projects .show-case {
+    grid-template-rows: repeat(3, 30vh);
+  }
+}
+
+.project-header {
+  transform: translateY(0) !important;
+}
+
+.project-transition {
+  transform: translateY(0) !important;
+}
+
+.name-transition {
+  transform: translateY(0) !important;
+}
+
+.modal {
+  position: fixed !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 10 !important;
+  width: 100% !important;
+  height: 100% !important;
+  place-items: center !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+          backdrop-filter: blur(20px) !important;
+}
+.modal .image-wrapper {
+  width: 80% !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+.modal .caption {
+  display: initial !important;
+}
+.modal .caption .caption-paragraph {
+  display: initial !important;
+}
+.modal .caption .caption-tech {
+  display: initial !important;
+}
+.modal .caption .caption-tech ul {
+  display: flex;
+  gap: 0.5rem;
+}
+.modal .caption .caption-tech ul li {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.35rem 0.5rem;
+  transition: all 0.25s linear;
+}
+.modal .caption .caption-tech ul li:hover {
+  transform: translateY(-10px);
+  color: #1d1d1d;
+}
+.modal .caption .links {
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+}
+.modal .caption .links a {
+  margin-inline: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.modal .caption .links a :hover {
+  color: #1d1d1d;
+}
+
+.socials {
+  display: none;
+  position: fixed;
+  left: 0.5rem;
+  bottom: 5rem;
+  font-size: 2rem;
+  z-index: 5;
+  height: -moz-fit-content;
+  height: fit-content;
+  animation: bounce 750ms ease-in 2000ms forwards;
+  transform: translateY(150%);
+}
+@media (min-width: 768px) {
+  .socials {
+    display: initial;
+  }
+}
+.socials ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  position: relative;
+}
+.socials ul ::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 5rem;
+  background-color: white;
+  bottom: -80px;
+  left: 45%;
+}
+.socials ul li {
+  transition: all 0.2s linear;
+}
+.socials ul li a {
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  transform: translateY(0px);
+}
+.socials ul li a svg {
+  display: block;
+  transition: all 0.2s linear;
+}
+.socials ul li a svg:hover {
+  transform: translateY(-5px);
+  color: #4e4e50;
+}
+.socials ul li a svg:active {
+  transform: translateY(-3px);
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.skills {
+  border: 1px solid;
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 3.5rem;
+}
+.skills ul {
+  display: flex;
+  border: 1px solid;
+  overflow: hidden;
+  width: 150%;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+  overflow: scroll;
+  animation: slide 4s linear infinite 5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-16%);
+  }
+  40% {
+    transform: translateX(-16%);
+  }
+  60% {
+    transform: translateX(-32%);
+  }
+  80% {
+    transform: translateX(-32%);
+  }
+  100% {
+    transform: translateX(-48%);
+  }
+}
+.connect {
+  z-index: 3;
+  position: relative;
+  opacity: 0;
+  transition: all 0.6s ease-in;
+}
+.connect .connect-header {
+  font-family: "Teko", sans-serif;
+}
+.connect .form form label {
+  display: block;
+}
+.connect .form form input,
+.connect .form form textarea {
+  border: none;
+  background-color: #1a1a1d;
+  border-bottom: 1px solid white;
+  color: white;
+  width: 100%;
+}
+.connect .form form input:focus,
+.connect .form form textarea:focus {
+  outline: none;
+}
+.connect .form form label + input,
+.connect .form form label + textarea {
+  margin-bottom: 1rem;
+}
+.connect .form form textarea {
+  height: 30vh;
+}
+.connect .form form > div {
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  margin-block: 1rem;
+}
+.connect .form form .button button {
+  color: #1a1a1d;
+  background: white;
+  padding: 0.15rem 0.75rem;
+  font-size: 1.5rem;
+  border: none;
+  box-shadow: -1px 5px 5px 2px black;
+  transition: all 0.3s linear;
+}
+.connect .form form .button button:active {
+  transform: translate(-1px, 5px);
+  box-shadow: 0 0 0 0 black;
+}
+@media (min-width: 768px) {
+  .connect {
+    display: flex;
+    align-items: center;
+  }
+  .connect .connect-header {
+    align-self: baseline;
+  }
+  .connect .form {
+    width: 90%;
+  }
+  .connect .form form div {
+    margin-block: 1rem;
+  }
+  .connect .form form .name-email {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+  }
+  .connect .form form .name-email div {
+    width: 100%;
+  }
+  .connect .form form .message {
+    height: 30vh;
+  }
+  .connect .form form .message textarea {
+    height: 98%;
+  }
+}
+
+.form-transition {
+  opacity: 1 !important;
+}
+
+footer .footer {
+  position: relative;
+  font-size: 2rem;
+  z-index: 5;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-block: 2.5rem;
+}
+footer .footer :after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1rem;
+}
+footer .footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  position: relative;
+}
+footer .footer ul li {
+  transition: all 0.2s linear;
+}
+footer .footer ul li a {
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  transform: translateY(0px);
+}
+footer .footer ul li a svg {
+  display: block;
+  transition: all 0.2s linear;
+}
+footer .footer ul li a svg:hover {
+  transform: translateY(-5px);
+}
+footer .footer ul li a svg:active {
+  transform: translateY(-3px);
+}
+footer .footer .credit {
+  font-size: 1rem;
+  margin-top: 2.25rem;
+  display: grid;
+  place-items: center;
+}
+footer .footer .credit a {
+  display: block;
+  text-decoration: none;
+  color: #4e4e50;
+}
+footer .footer .credit a:visited {
+  color: #4e4e50;
+}/*# sourceMappingURL=main.css.map */

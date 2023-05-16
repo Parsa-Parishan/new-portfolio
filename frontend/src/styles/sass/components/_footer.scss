@@ -1,0 +1,60 @@
+footer {
+  .footer {
+    position: relative;
+    font-size: 2rem;
+    z-index: 5;
+    height: fit-content;
+    margin-block: 2.5rem;
+    :after {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 1px;
+      background: white;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -1rem;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin: 0;
+      position: relative;
+      li {
+        transition: all 0.2s linear;
+        a {
+          color: white;
+          cursor: pointer;
+          transition: all 0.2s linear;
+          transform: translateY(0px);
+          svg {
+            display: block;
+            transition: all 0.2s linear;
+            &:hover {
+              transform: translateY(-5px);
+            }
+            &:active {
+              transform: translateY(-3px);
+            }
+          }
+        }
+      }
+    }
+    .credit {
+      font-size: 1rem;
+      margin-top: 2.25rem;
+      display: grid;
+      place-items: center;
+      a {
+        display: block;
+        text-decoration: none;
+        color: #4e4e50;
+        &:visited {
+          color: #4e4e50;
+        }
+      }
+    }
+  }
+}

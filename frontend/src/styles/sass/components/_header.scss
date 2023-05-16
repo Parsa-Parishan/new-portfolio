@@ -1,0 +1,263 @@
+header {
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+  padding-block: 1.5rem;
+  height: 85vh;
+
+  transform: translateY(10vh);
+  .extra {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    float: inline-end;
+    line-height: 1;
+    margin-bottom: 2rem;
+    backdrop-filter: grayscale(25%);
+    width: 100%;
+    border-radius: 10px;
+    font-family: "Mr Dafoe", cursive;
+    color: white;
+    div {
+      font-size: 3rem;
+      position: relative;
+      animation: extra_animation .5s ease-in-out 1700ms forwards;
+      opacity: 0;
+      .month {
+        margin-inline: 0.5rem 2rem;
+        font-family: "Sedgwick Ave Display", cursive;
+        font-size: 1.5rem;
+        vertical-align: top;
+        span {
+          font-size: 0.5rem;
+          position: absolute;
+          width: 97%;
+          right: 25%;
+          bottom: -10%;
+          text-align: left;
+          font-family: sans-serif;
+          width: fit-content;
+        }
+      }
+    }
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    clear: right;
+    gap: 2rem;
+    div {
+      position: relative;
+      backdrop-filter: grayscale(25%);
+      border-radius: 10px;
+    }
+    .intro {
+      font-family: "Teko", sans-serif;
+
+      .greet {
+        font-size: 2rem;
+        overflow-y: hidden;
+        div {
+          transform: translateY(100%);
+          transition: all 0.5s ease-out;
+        }
+      }
+      h1 {
+        line-height: 0.75;
+        .name {
+          overflow: hidden;
+          .first {
+            font-size: 4rem;
+            transform: translateY(-120%);
+            transition: transform 0.5s ease-in;
+          }
+          div {
+            font-size: 1.25rem;
+            transform: translateY(150%);
+            transition: all 0.5s ease-out;
+          }
+        }
+        .occupation {
+          font-size: 4rem;
+          overflow-y: hidden;
+          div {
+            transform: translateY(-200%);
+            transition: transform 0.5s ease-in;
+          }
+        }
+      }
+    }
+    .about-me {
+      font-size: 1.09rem;
+      display: grid;
+      place-items: center;
+      padding: 0.5rem;
+      position: 1;
+      overflow: hidden;
+      background: transparent;
+      font-family: "Inconsolata", monospace;
+      div {
+        padding-inline: 10px;
+        width: fit-content;
+        transform: scaleX(85%);
+        p {
+          color: #fff;
+          overflow: hidden; /* Ensures the content is not revealed until the animation */
+          width: 0;
+          white-space: nowrap; /* Keeps the content on a single line */
+          animation: typing 2s steps(30, start) forwards,
+            blink-caret 0.5s step-end backwards;
+        }
+        :nth-child(1) {
+          animation-delay: 1500ms;
+        }
+        :nth-child(2) {
+          animation-delay: 3000ms;
+        }
+        :nth-child(3) {
+          animation-delay: 4500ms;
+        }
+        :nth-child(4) {
+          animation-delay: 6500ms;
+        }
+        :nth-child(5) {
+          animation-delay: 8500ms;
+        }
+        :nth-child(6) {
+          animation-delay: 10000ms;
+        }
+        :nth-child(7) {
+          animation-delay: 12000ms;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .extra {
+      div {
+        font-size: 10rem;
+        cursor: pointer;
+        .month {
+          vertical-align: middle;
+          font-size: 3rem;
+          position: relative;
+          .work {
+            transform: rotate(90deg);
+            font-size: 1rem;
+            right: -50px;
+            bottom: 20%;
+          }
+          .fake {
+            position: absolute;
+            bottom: -35px;
+            left: 0;
+            font-size: 1rem;
+            opacity: 0;
+            transition: all 0.3s ease-in 250ms;
+          }
+        }
+        &:hover {
+          .month {
+            .fake {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .header {
+      .intro {
+        h1 {
+          .name {
+            font-size: 8rem;
+            div {
+              font-size: 2rem;
+            }
+          }
+          .occupation {
+            font-size: 8rem;
+          }
+        }
+      }
+      .about-me {
+        font-size: 1.75rem;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    .extra {
+      div {
+        font-size: 10rem;
+      }
+    }
+    .header {
+      flex-direction: row;
+      div {
+        width: 75%;
+      }
+      .intro {
+        h1 {
+          .name {
+            font-size: 8rem;
+            .first {
+              font-size: 7rem;
+            }
+            div {
+              font-size: 2rem;
+            }
+          }
+          .occupation {
+            font-size: 7rem;
+          }
+        }
+      }
+      .about-me {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+.name-transition {
+  transform: translateY(0) !important;
+}
+
+.something-transition {
+  transform: translateY(0) !important;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-right: none; /* The typwriter cursor */
+    border-color: transparent;
+  }
+  50% {
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    border-color: orange;
+  }
+}
+
+@keyframes extra_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
