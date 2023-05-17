@@ -24,7 +24,6 @@ function App() {
 
   const body = document.body;
   body.classList = hidden && "show-overflow";
-  console.log(body);
 
   useEffect(() => {
     const intro = setTimeout(() => {
