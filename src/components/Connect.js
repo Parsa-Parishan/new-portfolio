@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Connect() {
   const [appear, setApper] = useState(false);
@@ -18,32 +19,58 @@ export default function Connect() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const location = window.location.hostname;
+    const location = window.location.host;
     console.log(email);
-    let emailBody = {
-      method: "POST",
-      body: JSON.stringify(email),
-      headers: {
-        "Content-type": "application/json",
-      },
-    };
-    try {
-      let response = await fetch(`http://${location}:3000/send`, emailBody);
-      console.log(response);
-      if (!response.ok) {
-        throw new Error("bad request");
-      }
-      const jsonResponse = await response.json();
-      console.log(jsonResponse);
-      setEmail({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (err) {
-      console.log(err);
-    }
+    emailjs
+      .send(
+        "service_tjeunvg",
+        "template_amefk8c",
+        {
+          from_name: email.name,
+          message: email.message,
+          from_email: email.email,
+          subject: email.subject,
+        },
+        "lUwT2S2c2qWCze8fi"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setTimeout(() => {
+            window.alert("Message Sent!");
+          }, 2000);
+        },
+        (err) => {
+          console.log(err);
+          setTimeout(() => {
+            window.alert("Error!");
+          }, 2000);
+        }
+      );
+    // let emailBody = {
+    //   method: "POST",
+    //   body: JSON.stringify(email),
+    //   headers: {
+    //     "Content-type": "application/json",
+    //   },
+    // };
+    // try {
+    //   let response = await fetch(`http://${location}/send`, emailBody);
+    //   console.log(response);
+    //   if (!response.ok) {
+    //     throw new Error("bad request");
+    //   }
+    //   const jsonResponse = await response.json();
+    //   console.log(jsonResponse);
+    //   setEmail({
+    //     name: "",
+    //     email: "",
+    //     subject: "",
+    //     message: "",
+    //   });
+    // } catch (err) {
+    //   console.log(err);
+    // }
   };
 
   useEffect(() => {
@@ -77,7 +104,7 @@ export default function Connect() {
             <div className="email">
               <label htmlFor="email">EMAIL ADDRESS</label>
               <input
-                type="text"
+                type="email"
                 id="email"
                 required
                 placeholder="Email"
