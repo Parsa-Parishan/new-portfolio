@@ -82,7 +82,7 @@ export default function Connect() {
   }, []);
 
   return (
-    <div className={`connect ${appear && "form-transition"}`}>
+    <div className={`connect ${appear && "form-transition"}`} id="contact">
       <div className="connect-header">
         <h1>Get in Touch</h1>
       </div>

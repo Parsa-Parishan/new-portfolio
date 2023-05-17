@@ -16,7 +16,9 @@ export default function Nav({ landing }) {
         <div className="about">
           <a href="#about">About</a>
         </div>
-        <div className="contact">Contact</div>
+        <div className="contact">
+          <a href="#contact">Contact</a>
+        </div>
       </div>
     </div>
   );

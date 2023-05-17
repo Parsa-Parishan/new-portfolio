@@ -602,6 +602,7 @@ main .profile .background-avatar .avatar {
 }
 main .profile .background-avatar .avatar img {
   width: 60vw;
+  aspect-ratio: 1;
   border-radius: 50%;
   border: 3px dashed;
   animation: avatar 6s linear infinite;
