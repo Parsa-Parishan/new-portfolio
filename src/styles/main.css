@@ -139,6 +139,12 @@ body #root .App {
   z-index: 0;
   height: 100%;
 }
+@media (max-width: 768px) {
+  body #root .App {
+    background: url(../img/Boston-portrait.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+}
 @media (min-width: 768px) {
   body #root .App {
     padding-inline: 3rem;

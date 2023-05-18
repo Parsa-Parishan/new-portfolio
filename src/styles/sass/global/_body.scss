@@ -10,6 +10,11 @@ body {
   #root {
     position: relative;
     .App {
+      @media (max-width: 768px) {
+        background: url(../img/Boston-portrait.jpg) no-repeat center center
+          fixed;
+        background-size: cover;
+      }
       background: url(../img/boston.jpg) no-repeat center center fixed;
       background-size: cover;
       position: relative;
