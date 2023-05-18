@@ -47,6 +47,7 @@ export default function Projects() {
         setModalTwo(() => false);
         setModalThree(() => false);
         setModalFour(() => false);
+        setModalFive(() => false);
       }
     });
   }, []);
