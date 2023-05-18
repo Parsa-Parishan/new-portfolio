@@ -23,9 +23,9 @@ export default function Header({ landing }) {
       <div className="about-me">
         <div>
           <p>I’m a Web Developer based in</p>
-          <p> Canada looking to join a company. I work on</p>
-          <p> the Front-End side of things to help create and</p>
-          <p>maintain components. I love working on new</p>
+          <p> Canada and I love creating stunning websites.</p>
+          <p>I work on the Front-End side of things to help</p>
+          <p>create and maintain components. I love working on new</p>
           <p>ideas to hone and expand my skills. I’m</p>
           <p>currently learning Back-End development to</p>
           <p>gradually shift toward Full-stack.</p>
