@@ -35,9 +35,9 @@ export default function Profile() {
       <div className="background-avatar">
         <div className="background" id="background">
           <p className={`${background && "background-transition"}`}>
-            I’m a Web Developer with two years of experience. I’m currently
-            working with a small team at WebDev Canada. I help create and
-            maintain components. I work on the Front-End side of things. My
+            I’m a Web Developer with two years of experience. I have worked with
+            a small team at WebDev Canada. I helped with creating and
+            maintaining components. I worked on the Front-End side of things. My
             daily stack consists of React.Js, React router, Redux.js, and Sass.
             <span id="resume"></span>I also work on my projects to hone and
             expand my skills. I’m currently learning Back-End development to
