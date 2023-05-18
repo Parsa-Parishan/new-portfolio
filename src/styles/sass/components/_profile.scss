@@ -116,6 +116,7 @@ main {
     height: 40vh;
     bottom: 2rem;
     right: 2rem;
+    z-index: -10;
     opacity: 0;
     transform: rotate(0) translate(0, 0);
     transition: all 0.25s linear;
@@ -214,6 +215,7 @@ main {
 
 .show-resume {
   transform: rotate(15deg) translate(-10rem, -3rem) !important;
+  z-index: 10 !important;
   opacity: 1 !important;
 }
 
