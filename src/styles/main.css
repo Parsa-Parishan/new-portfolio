@@ -374,17 +374,16 @@ header .header .about-me {
   font-size: 1.09rem;
   display: grid;
   place-items: center;
-  padding: 0.5rem;
+  padding-block: 0.5rem;
   position: 1;
   overflow: hidden;
   background: transparent;
   font-family: "Inconsolata", monospace;
 }
 header .header .about-me div {
-  padding-inline: 10px;
   width: -moz-fit-content;
   width: fit-content;
-  transform: scaleX(85%);
+  transform: scaleX(85%) translateX(-25px);
 }
 header .header .about-me div p {
   color: #fff;

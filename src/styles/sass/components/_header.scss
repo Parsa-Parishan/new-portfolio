@@ -25,7 +25,7 @@ header {
     div {
       font-size: 3rem;
       position: relative;
-      animation: extra_animation .5s ease-in-out 1700ms forwards;
+      animation: extra_animation 0.5s ease-in-out 1700ms forwards;
       opacity: 0;
       .month {
         margin-inline: 0.5rem 2rem;
@@ -96,15 +96,14 @@ header {
       font-size: 1.09rem;
       display: grid;
       place-items: center;
-      padding: 0.5rem;
+      padding-block: 0.5rem;
       position: 1;
       overflow: hidden;
       background: transparent;
       font-family: "Inconsolata", monospace;
       div {
-        padding-inline: 10px;
         width: fit-content;
-        transform: scaleX(85%);
+        transform: scaleX(85%) translateX(-25px);
         p {
           color: #fff;
           overflow: hidden; /* Ensures the content is not revealed until the animation */
