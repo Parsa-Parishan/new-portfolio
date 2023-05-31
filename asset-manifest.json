@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/new-portfolio/static/css/main.4508bfbd.css",
-    "main.js": "/new-portfolio/static/js/main.dca15969.js",
+    "main.js": "/new-portfolio/static/js/main.2763cd61.js",
     "static/media/Boston-portrait.jpg": "/new-portfolio/static/media/Boston-portrait.bce0c1bbb2b65f3cdcab.jpg",
     "static/media/ecom.png": "/new-portfolio/static/media/ecom.51e276a1a4e2d05e4577.png",
     "static/media/boston.jpg": "/new-portfolio/static/media/boston.dc47a9c4fe36f4c9109e.jpg",
@@ -10,15 +10,15 @@
     "static/media/oldPortfolio.png": "/new-portfolio/static/media/oldPortfolio.e06e0d1d95e588ff1f17.png",
     "static/media/note.png": "/new-portfolio/static/media/note.e1832fe63c4c9939a6f6.png",
     "static/media/avatar.jpeg": "/new-portfolio/static/media/avatar.6c1f5aa0c913f8d76b56.jpeg",
-    "static/media/Resume.pdf": "/new-portfolio/static/media/Resume.b6fda1fe8bae39cc5f6f.pdf",
+    "static/media/Resume.pdf": "/new-portfolio/static/media/Resume.5680da0ce9e2896b7268.pdf",
     "static/media/resume_pdf.png": "/new-portfolio/static/media/resume_pdf.b01920a5e99a5c10c4d4.png",
     "static/media/arrow.svg": "/new-portfolio/static/media/arrow.0251b1468258aac865811b12242a7a7d.svg",
     "index.html": "/new-portfolio/index.html",
     "main.4508bfbd.css.map": "/new-portfolio/static/css/main.4508bfbd.css.map",
-    "main.dca15969.js.map": "/new-portfolio/static/js/main.dca15969.js.map"
+    "main.2763cd61.js.map": "/new-portfolio/static/js/main.2763cd61.js.map"
   },
   "entrypoints": [
     "static/css/main.4508bfbd.css",
-    "static/js/main.dca15969.js"
+    "static/js/main.2763cd61.js"
   ]
 }
