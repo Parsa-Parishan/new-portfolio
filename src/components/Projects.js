@@ -230,17 +230,12 @@ export default function Projects() {
             </div>
             <div className="links">
               <a
-                href="https://github.com/Parsa-Parishan/Note-App"
+                href="https://github.com/Parsa-Parishan/kanban-board"
                 target="_blank"
               >
                 <FaGithub />
               </a>
-              <a
-                href="https://parsa-parishan.github.io/Note-App/"
-                target="_blank"
-              >
-                Live
-              </a>
+              <a target="_blank">Live</a>
             </div>
           </div>
         </div>
