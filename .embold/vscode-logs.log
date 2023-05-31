@@ -1,3 +1,21 @@
 2023-05-25 17:29:52 info: tempDirectory:/Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/temp
 2023-05-25 17:29:52 info: Extraction complete for source: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/resources/embold-scanner-archive.zip, destination: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/temp
 2023-05-25 17:29:52 info: Congratulations, your extension "Embold" is now active!
+2023-05-31 16:17:56 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/.git/index.lock
+2023-05-31 16:17:56 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/.git/refs/heads/main.lock
+2023-05-31 16:17:56 error: SQLITE_ERROR: no such table: issues
+2023-05-31 16:17:56 error: SQLITE_ERROR: no such table: issues
+2023-05-31 16:17:59 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/.git/refs/remotes/origin/main.lock
+2023-05-31 16:17:59 error: SQLITE_ERROR: no such table: issues
+2023-05-31 16:18:08 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/build/static
+2023-05-31 16:18:08 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/build/index.html
+2023-05-31 16:18:08 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/build/asset-manifest.json
+2023-05-31 16:18:08 error: SQLITE_ERROR: no such table: issues
+2023-05-31 16:18:08 error: SQLITE_ERROR: no such table: issues
+2023-05-31 16:18:08 error: SQLITE_ERROR: no such table: issues
+2023-05-31 17:04:35 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/src/resume/Resume.pdf
+2023-05-31 17:04:35 error: SQLITE_ERROR: no such table: issues
+2023-05-31 17:04:39 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/src/resume/Parsa%20Parishan-2.pdf
+2023-05-31 17:04:39 error: SQLITE_ERROR: no such table: issues
+2023-05-31 17:04:46 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/.git/index.lock
+2023-05-31 17:04:46 error: SQLITE_ERROR: no such table: issues
