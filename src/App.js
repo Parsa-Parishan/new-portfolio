@@ -9,6 +9,7 @@ import Socials from "./components/Socials";
 import Skills from "./components/Skills";
 import Connect from "./components/Connect";
 import Footer from "./components/Footer";
+import emailjs from "@emailjs/browser";
 
 function App() {
   const [transoform, setTransoform] = useState(true);
@@ -44,6 +45,33 @@ function App() {
       clearTimeout(hide);
     };
   }, []);
+
+  useEffect(() => {
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      const location = window.location.host;
+      emailjs
+        .send(
+          "service_tjeunvg",
+          "template_amefk8c",
+          {
+            message: "website checked"
+          },
+          "lUwT2S2c2qWCze8fi"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (err) => {
+            console.log(err);
+            setTimeout(() => {
+              window.alert("Error!");
+            }, 2000);
+          }
+        );
+    };
+  })
 
   const style = {
     opacity: opacity,

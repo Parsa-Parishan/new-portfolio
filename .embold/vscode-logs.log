@@ -19,3 +19,38 @@
 2023-05-31 17:04:39 error: SQLITE_ERROR: no such table: issues
 2023-05-31 17:04:46 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/.git/index.lock
 2023-05-31 17:04:46 error: SQLITE_ERROR: no such table: issues
+2023-05-31 17:04:51 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/.git/index.lock
+2023-05-31 17:04:51 error: SQLITE_ERROR: no such table: issues
+2023-05-31 17:04:59 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/.git/index.lock
+2023-05-31 17:04:59 error: SQLITE_ERROR: no such table: issues
+2023-05-31 17:05:02 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/.git/refs/remotes/origin/main.lock
+2023-05-31 17:05:02 error: SQLITE_ERROR: no such table: issues
+2023-05-31 17:05:10 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/build/static
+2023-05-31 17:05:10 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/build/index.html
+2023-05-31 17:05:10 info: file:///Users/parsaparishan/Desktop/Project/new-portfolio/build/asset-manifest.json
+2023-05-31 17:05:10 error: SQLITE_ERROR: no such table: issues
+2023-05-31 17:05:10 error: SQLITE_ERROR: no such table: issues
+2023-05-31 17:05:10 error: SQLITE_ERROR: no such table: issues
+2023-07-06 19:56:07 info: tempDirectory:/Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/temp
+2023-07-06 19:56:07 info: Extraction complete for source: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/resources/embold-scanner-archive.zip, destination: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/temp
+2023-07-06 19:56:07 info: Congratulations, your extension "Embold" is now active!
+2023-07-11 22:17:16 info: tempDirectory:/Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/temp
+2023-07-11 22:17:16 info: Extraction complete for source: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/resources/embold-scanner-archive.zip, destination: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/temp
+2023-07-11 22:17:16 info: Congratulations, your extension "Embold" is now active!
+2023-07-13 16:00:01 info: tempDirectory:/Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/temp
+2023-07-13 16:00:01 info: Extraction complete for source: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/resources/embold-scanner-archive.zip, destination: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/temp
+2023-07-13 16:00:01 info: Congratulations, your extension "Embold" is now active!
+2023-07-20 23:28:40 info: tempDirectory:/Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/temp
+2023-07-20 23:28:40 info: Extraction complete for source: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/resources/embold-scanner-archive.zip, destination: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.5/temp
+2023-07-20 23:28:40 info: Congratulations, your extension "Embold" is now active!
+2023-10-26 22:01:13 info: tempDirectory:/Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.6/temp
+2023-10-26 22:01:13 info: Congratulations, your extension "Embold" is now active!
+2023-10-26 22:01:13 info: Current Version Of Embold
+2023-10-26 22:01:13 info: 0.1.6
+2023-10-26 22:01:13 info: Extraction complete for source: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.6/resources/embold-scanner-archive.zip, destination: /Users/parsaparishan/.vscode/extensions/embold-vscode.embold-0.1.6/temp
+2023-10-26 22:01:14 info: Embold extension version response:
+2023-10-26 22:01:14 info: {"hasSupport":false,"version":"0.9.0.64","changeNotes":"<div> <p>Release Date: 05 May 2022 <br><span>Embold has added 6 new Java rules that will make your code more secure!</span></p> </div>"}
+2023-10-26 22:01:14 info: current version : 
+2023-10-26 22:01:14 info: latest version : 
+2023-10-26 22:01:20 error: SQLITE_ERROR: no such table: issues
+2023-10-26 22:02:04 error: SQLITE_ERROR: no such table: issues
