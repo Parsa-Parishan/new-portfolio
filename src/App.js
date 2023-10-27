@@ -47,15 +47,14 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const handleSubmit = async (e) => {
-      e.preventDefault();
+    const sendEmail = async () => {
       const location = window.location.host;
       emailjs
         .send(
           "service_tjeunvg",
           "template_amefk8c",
           {
-            message: "website checked"
+            message: "website checked",
           },
           "lUwT2S2c2qWCze8fi"
         )
@@ -71,7 +70,8 @@ function App() {
           }
         );
     };
-  })
+    sendEmail();
+  }, []);
 
   const style = {
     opacity: opacity,
