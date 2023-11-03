@@ -4,6 +4,7 @@ import weather from "../img/screenshots/weather.png";
 import note from "../img/screenshots/note.png";
 import oldPortfolio from "../img/screenshots/oldPortfolio.png";
 import kanban from "../img/screenshots/kanban.png";
+import form from "../img/screenshots/form.jpg";
 import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
@@ -14,11 +15,13 @@ export default function Projects() {
   const [third, setThird] = useState(false);
   const [fourth, setFourth] = useState(false);
   const [fifth, setFifth] = useState(false);
+  const [sixth, setSixth] = useState(false);
   const [modalOne, setModalOne] = useState(false);
   const [modalTwo, setModalTwo] = useState(false);
   const [modalThree, setModalThree] = useState(false);
   const [modalFour, setModalFour] = useState(false);
   const [modalFive, setModalFive] = useState(false);
+  const [modalSix, setModalSix] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -40,6 +43,9 @@ export default function Projects() {
       if (window.scrollY >= 2190) {
         setFifth(() => true);
       }
+      if (window.scrollY >= 2280) {
+        setSixth(() => true);
+      }
     });
     window.addEventListener("click", (e) => {
       if (e.target.classList.contains("project")) {
@@ -48,12 +54,20 @@ export default function Projects() {
         setModalThree(() => false);
         setModalFour(() => false);
         setModalFive(() => false);
+        setModalSix(() => false);
       }
     });
   }, []);
 
   const body = document.body;
-  if (modalOne || modalTwo || modalThree) {
+  if (
+    modalOne ||
+    modalTwo ||
+    modalThree ||
+    modalFour ||
+    modalFive ||
+    modalSix
+  ) {
     body.classList = "hidden-overflow";
   } else {
     body.classList = "";
@@ -115,16 +129,55 @@ export default function Projects() {
           </div>
         </div>
         <div
-          className={`project oldPortfolio ${modalTwo && "modal"}`}
+          className={`project form ${modalTwo && "modal"}`}
           onClick={() => setModalTwo(() => true)}
         >
           <div className={`image-wrapper ${second && "project-transition"}`}>
             <div className="image">
               <div className="filter"></div>
-              <img src={oldPortfolio} alt="old portfolio" />
+              <img src={form} alt="form" />
             </div>
           </div>
           <div className={`caption ${second && "name-transition"}`}>
+            <div className="caption-header">
+              <h2>Multi-step Form</h2>
+            </div>
+            <div className="caption-paragraph">
+              <p>
+                A multi-step form, each component is step of a sequence to
+                select type of a plan an extra add-ons with the plan, a summary
+                of plan and add-ons
+              </p>
+            </div>
+            <div className="caption-tech">
+              <ul>
+                <li>HTML.CSS</li>
+                <li>JAVASCRIPT</li>
+                <li>REACT JS</li>
+                <li>SASS</li>
+              </ul>
+            </div>
+            <div className="links">
+              <a href="https://github.com/Parsa-Parishan/form" target="_blank">
+                <FaGithub />
+              </a>
+              <a href="http://parsa-parishan.github.io/form/" target="_blank">
+                Live
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          className={`project oldPortfolio ${modalThree && "modal"}`}
+          onClick={() => setModalThree(() => true)}
+        >
+          <div className={`image-wrapper ${third && "project-transition"}`}>
+            <div className="image">
+              <div className="filter"></div>
+              <img src={oldPortfolio} alt="old portfolio" />
+            </div>
+          </div>
+          <div className={`caption ${third && "name-transition"}`}>
             <div className="caption-header">
               <h2>Old Portfolio</h2>
             </div>
@@ -154,16 +207,16 @@ export default function Projects() {
           </div>
         </div>
         <div
-          className={`project api ${modalThree && "modal"}`}
+          className={`project api ${modalFour && "modal"}`}
           onClick={() => setModalThree(() => true)}
         >
-          <div className={`image-wrapper ${third && "project-transition"}`}>
+          <div className={`image-wrapper ${fourth && "project-transition"}`}>
             <div className="image">
               <div className="filter"></div>
               <img src={weather} alt="weather api" />
             </div>
           </div>
-          <div className={`caption ${third && "name-transition"}`}>
+          <div className={`caption ${fourth && "name-transition"}`}>
             <div className="caption-header">
               <h2>Current weather/forecast app</h2>
             </div>
@@ -202,16 +255,16 @@ export default function Projects() {
           </div>
         </div>
         <div
-          className={`project kanban ${modalFour && "modal"}`}
-          onClick={() => setModalFour(() => true)}
+          className={`project kanban ${modalFive && "modal"}`}
+          onClick={() => setModalFive(() => true)}
         >
-          <div className={`image-wrapper ${fourth && "project-transition"}`}>
+          <div className={`image-wrapper ${fifth && "project-transition"}`}>
             <div className="image">
               <div className="filter"></div>
               <img src={kanban} alt="kanban board" />
             </div>
           </div>
-          <div className={`caption ${fourth && "name-transition"}`}>
+          <div className={`caption ${fifth && "name-transition"}`}>
             <div className="caption-header">
               <h2>Kanban Board</h2>
             </div>
@@ -240,16 +293,16 @@ export default function Projects() {
           </div>
         </div>
         <div
-          className={`project filler ${modalFive && "modal"}`}
-          onClick={() => setModalFive(() => true)}
+          className={`project filler ${modalSix && "modal"}`}
+          onClick={() => setModalSix(() => true)}
         >
-          <div className={`image-wrapper ${fifth && "project-transition"}`}>
+          <div className={`image-wrapper ${sixth && "project-transition"}`}>
             <div className="image">
               <div className="filter"></div>
               <img src={note} alt="note" />
             </div>
           </div>
-          <div className={`caption ${fifth && "name-transition"}`}>
+          <div className={`caption ${sixth && "name-transition"}`}>
             <div className="caption-header">
               <h2>Note App</h2>
             </div>
