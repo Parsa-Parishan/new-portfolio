@@ -648,6 +648,11 @@ main .resume-pdf img {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 767px) {
+  main .resume-pdf {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   main .profile .background-avatar .avatar p {
     align-self: center;
