@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ecom from "../img/screenshots/ecom.png";
 import weather from "../img/screenshots/weather.png";
-import note from "../img/screenshots/note.png";
+import link from "../img/screenshots/link.jpg";
 import oldPortfolio from "../img/screenshots/oldPortfolio.png";
 import kanban from "../img/screenshots/kanban.png";
 import form from "../img/screenshots/form.jpg";
@@ -37,7 +37,7 @@ const projectsData = [
   {
     id: 3,
     name: "Link Sharing",
-    image: form,
+    image: link,
     description: "A fully functioanl link sharing app created with ReactJS.",
     techStack: ["HTML/CSS", "JavaScript", "React JS", "SASS"],
     githubLink: "https://github.com/Parsa-Parishan/link_sharing",
@@ -47,7 +47,7 @@ const projectsData = [
     id: 4,
     name: "Old Portfolio",
     image: oldPortfolio,
-    description: "A fully functioanl link sharing app created with ReactJS.",
+    description: "",
     techStack: ["HTML/CSS", "JavaScript", "React JS", "SASS"],
     githubLink: "https://github.com/Parsa-Parishan/My-Portfolio",
     liveLink: "https://parsa-parishan.github.io/My-Portfolio/",
