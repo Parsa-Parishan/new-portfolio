@@ -127,3 +127,11 @@
 2023-11-21 16:31:24 info: current version : 
 2023-11-21 16:31:24 info: latest version : 
 2023-11-21 16:34:33 error: SQLITE_ERROR: no such table: issues
+2023-11-21 16:36:55 error: SQLITE_ERROR: no such table: issues
+2023-11-21 16:37:04 error: SQLITE_ERROR: no such table: issues
+2023-11-21 16:37:04 error: SQLITE_ERROR: no such table: issues
+2023-11-21 16:37:04 error: SQLITE_ERROR: no such table: issues
+2023-11-21 16:37:09 error: SQLITE_ERROR: no such table: issues
+2023-11-21 16:37:19 error: SQLITE_ERROR: no such table: issues
+2023-11-21 16:37:19 error: SQLITE_ERROR: no such table: issues
+2023-11-21 16:37:19 error: SQLITE_ERROR: no such table: issues

@@ -126,6 +126,12 @@ export default function Projects() {
     body.classList = "";
   }
 
+  window.addEventListener("click", (e) => {
+    if (e.target.classList[2] == "modal") {
+      handleModalClose();
+    }
+  });
+
   return (
     <div className="projects">
       <div className="header">
