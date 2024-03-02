@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import avatar from "../img/avatar.jpeg";
 import arrow from "../img/icon/arrow.svg";
 import resume_pdf from "../img/resume_pdf.png";
-import Resume from "../resume/Resume.pdf";
+import Resume from "../resume/Parsa-parishan.docx";
 
 export default function Profile() {
   const [show, setShow] = useState(false);

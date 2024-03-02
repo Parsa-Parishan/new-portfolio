@@ -169,3 +169,11 @@ Please visit http://www.java.com for information on installing Java.
 2024-03-02 17:48:42 info: Current installed embold extension version : 0.1.8
 2024-03-02 17:48:42 info: Latest embold extension version on marketplace : 0.1.6
 2024-03-02 17:49:22 error: SQLITE_ERROR: no such table: issues
+2024-03-02 17:49:45 error: SQLITE_ERROR: no such table: issues
+2024-03-02 17:50:04 error: SQLITE_ERROR: no such table: issues
+2024-03-02 17:50:04 error: SQLITE_ERROR: no such table: issues
+2024-03-02 17:50:09 error: SQLITE_ERROR: no such table: issues
+2024-03-02 17:50:17 error: SQLITE_ERROR: no such table: issues
+2024-03-02 17:50:17 error: SQLITE_ERROR: no such table: issues
+2024-03-02 17:50:17 error: SQLITE_ERROR: no such table: issues
+2024-03-02 17:55:04 error: SQLITE_ERROR: no such table: issues
